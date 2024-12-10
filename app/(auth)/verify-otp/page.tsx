@@ -3,6 +3,13 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { ChevronLeft, Mail } from "lucide-react";
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSeparator,
+  InputOTPSlot,
+} from "@/components/ui/input-otp"
+
 
 const page = () => {
   const route = useRouter();
@@ -12,7 +19,7 @@ const page = () => {
       <button
         type="button"
         className="flex items-center gap-2"
-        onClick={() => route.push("/login")}
+        onClick={() => route.push("/reset-password")}
       >
         <ChevronLeft size={22} />
         <p className="font-medium md:text-[18px]">Back</p>
@@ -20,31 +27,35 @@ const page = () => {
 
       <div className="flex flex-col items-center justify-center mt-[30px]">
         <h1 className="text-[30px] font-semibold">Enter OTP</h1>
-        <p className="text-[#A4A1AA] font-medium md:text-[18px] mt-2 text-center">
+        <p className="text-[#A4A1AA] md:text-[18px] mt-2 text-center">
           We have shared a code of your registered email address
           johndoe@xmail.com
         </p>
       </div>
 
       <form className="mt-8">
-        <div className="relative mb-5 flex flex-col">
-          <label>Email Address</label>
-          <input
-            type="email"
-            name="email"
-            className="border-2 border-black rounded-[10px] py-4 px-9 mt-1 outline-none"
-          />
+        <div className="flex items-center justify-center">
+        <InputOTP maxLength={6}>
+          <InputOTPGroup>
+            <InputOTPSlot index={0} />
+            <InputOTPSlot index={1} />
+            <InputOTPSlot index={2} />
+          </InputOTPGroup>
+          <InputOTPSeparator />
+          <InputOTPGroup>
+            <InputOTPSlot index={3} />
+            <InputOTPSlot index={4} />
+            <InputOTPSlot index={5} />
+          </InputOTPGroup>
+        </InputOTP>
 
-          <div className="absolute top-[47px] left-2">
-            <Mail size={20} />
-          </div>
         </div>
 
         <button
           type="submit"
           className="bg-black rounded-[10px] text-[#ffffff] mt-[30px] w-full py-[17px]"
         >
-          Send OTP
+          Verify
         </button>
       </form>
     </div>

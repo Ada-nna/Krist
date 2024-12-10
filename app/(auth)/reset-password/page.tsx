@@ -8,7 +8,7 @@ const page = () => {
   const route = useRouter();
 
   return (
-    <div className="w-full md:w-[400px] 2xl:w-[500px] px-4 md:px-0">
+    <div className="w-full md:w-[400px] 2xl:w- [500px] px-4 md:px-0">
       <button
         type="button"
         className="flex items-center gap-2"
@@ -20,7 +20,7 @@ const page = () => {
 
       <div className="flex flex-col items-center justify-center mt-[30px]">
         <h1 className="text-[30px] font-semibold">Forgot password</h1>
-        <p className="text-[#A4A1AA] font-medium md:text-[18px] mt-2 text-center">
+        <p className="text-[#A4A1AA] font-normal md:text-[18px] mt-2 text-center">
           Enter your registered email address. We’ll send you a code to reset
           your password.
         </p>
@@ -41,7 +41,7 @@ const page = () => {
         </div>
 
         <button
-          type="submit"
+          type="button"
           onClick={() => route.push("/verify-otp")}
           className="bg-black rounded-[10px] text-[#ffffff] mt-[30px] w-full py-[17px]"
         >
