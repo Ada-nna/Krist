@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NavbarWrapper from "@/components/fixed/NavbarWrapper";
 
 export const metadata: Metadata = {
   title: "Krist App",
@@ -20,7 +21,12 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <>
+          <NavbarWrapper />
+          {children}
+        </>
+      </body>
     </html>
   );
 }

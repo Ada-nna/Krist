@@ -14,6 +14,7 @@ import {
 const page = () => {
   const route = useRouter();
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
+  const [isFocused, setIsFocused] = useState<boolean>(false);
 
   const handleOpenModal = () => {
     setIsOpenModal(true);
@@ -42,15 +43,22 @@ const page = () => {
         <div className="flex items-center justify-center">
           <InputOTP maxLength={6}>
             <InputOTPGroup>
-              <InputOTPSlot index={0} />
-              <InputOTPSlot index={1} />
-              <InputOTPSlot index={2} />
+              <InputOTPSlot
+                index={0}
+                onFocus={() => alert("focused")}
+                onBlur={() => console.log("únfocused")}
+                className={`border-2 ${
+                  isFocused ? "border-[#007BFF]" : "border-[#F3F2F3]"
+                }`}
+              />
+              <InputOTPSlot index={1} className="border-[#F3F2F3]" />
+              <InputOTPSlot index={2} className="border-[#F3F2F3]" />
             </InputOTPGroup>
             <InputOTPSeparator />
             <InputOTPGroup>
-              <InputOTPSlot index={3} />
-              <InputOTPSlot index={4} />
-              <InputOTPSlot index={5} />
+              <InputOTPSlot index={3} className="border-[#F3F2F3] border" />
+              <InputOTPSlot index={4} className="border-[#F3F2F3] border-2" />
+              <InputOTPSlot index={5} className="border-[#F3F2F3]" />
             </InputOTPGroup>
           </InputOTP>
         </div>
