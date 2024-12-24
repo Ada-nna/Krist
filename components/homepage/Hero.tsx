@@ -10,7 +10,7 @@ const Hero = () => {
           <p className="text-[24px]">Classic Exclusive</p>
           <h1 className="text-[48px] font-semibold">Couple's Collection</h1>
           <p className="text-[18px]">Upto 40% off</p>
-          <button className="flex items-center gap-1 py-3 px-6 text-white bg-black rounded-[8px] text-[13px] mt-5 transition-all duration-300 hover:bg-gray-800 hover:shadow-lg hover:scale-105">
+          <button className="flex items-center gap-1 py-3 px-6 text-white bg-black rounded-full text-[13px] mt-5 transition-all duration-300 hover:bg-gray-800 hover:shadow-lg hover:scale-105">
             <span className="transition-transform duration-300 group-hover:translate-x-1">
               Shop now
             </span>

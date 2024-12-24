@@ -99,3 +99,21 @@ body {
   display: inline-block;
   animation: marquee 20s linear infinite;
 }
+
+/* product card icons */
+.card-icons {
+  @apply absolute right-3 top-4 flex flex-col items-center z-50 gap-2 opacity-0 translate-x-[50px] transition-all duration-500;
+}
+
+.group:hover .card-icons {
+  @apply opacity-100 translate-x-0;
+}
+
+/* cart button */
+.cart-button {
+  @apply absolute bottom-4 left-3 p-2 bg-white w-[90%] rounded-full text-[14px] text-[red] font-medium flex justify-center items-center z-50 gap-2 opacity-0 translate-y-[50px] transition-all duration-500;
+}
+
+.group:hover .cart-button {
+  @apply opacity-100 translate-y-0;
+}

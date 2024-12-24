@@ -126,7 +126,7 @@ const Navbar = () => {
               ></path>
             </svg>
           </button>
-          <button className="flex items-center gap-1 py-3 px-6 text-white bg-black rounded-[8px] text-[13px] transition-all duration-300 hover:bg-gray-800 hover:shadow-lg hover:scale-105">
+          <button className="flex items-center gap-1 py-2 px-6 text-white bg-black rounded-full text-[13px] transition-all duration-300 hover:bg-gray-800 hover:shadow-lg hover:scale-105">
             <span className="transition-transform duration-300 group-hover:translate-x-1">
               Login
             </span>

@@ -6,6 +6,7 @@ export const Products = [
     productName: "Dove Sneakers",
     amount: "$107.99",
     rating: 4,
+    label: "NEW",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const Products = [
     productName: "Piqué Biker Jacket",
     amount: "$67.24",
     rating: 3,
+    label: "",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const Products = [
     productName: "ZVA 3-in-one Perfume",
     amount: "$40.41",
     rating: 5,
+    label: "SALE",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const Products = [
     productName: "Piqué Leather Bag",
     amount: "$70.32",
     rating: 4,
+    label: "",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const Products = [
     productName: "Green Camo Hoodie",
     amount: "$55.40",
     rating: 3,
+    label: "",
   },
   {
     id: 6,
@@ -46,21 +51,30 @@ export const Products = [
     productName: "T-shirt Contrast Pocket",
     amount: "$49.66",
     rating: 4,
+    label: "SALE",
   },
   {
     id: 7,
     image: "/product-7.jpg",
     name: "Product 7",
-    productName: "Leather Backpack",
+    productName: "Zara Leather Backpack",
     amount: "$31.37",
     rating: 3,
+    label: "",
   },
   {
     id: 8,
     image: "/product-8.jpg",
     name: "Product 8",
-    productName: "Solid Plain Tee",
+    productName: "ASOS Plain Tee",
     amount: "$26.28",
     rating: 4,
+    label: "",
   },
+];
+
+export const CardIcons = [
+  { id: 1, image: "/heart.png", name: "heart" },
+  { id: 2, image: "/compare.png", name: "compare" },
+  { id: 3, image: "/search.png", name: "search" },
 ];

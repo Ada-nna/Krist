@@ -1,6 +1,7 @@
 import React from "react";
-import { StarIcon, StarsIcon } from "lucide-react";
+import Image from "next/image";
 import { Products } from "../DummyContents";
+import { CardIcons } from "../DummyContents";
 
 const ProductList = () => {
   return (
@@ -8,7 +9,7 @@ const ProductList = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {Products.map((product) => {
           return (
-            <div key={product.id}>
+            <div key={product.id} className="relative group overflow-hidden">
               <div
                 className="relative border h-[260px] w-full md:w-[260px]"
                 style={{
@@ -18,13 +19,42 @@ const ProductList = () => {
                   backgroundSize: "cover",
                 }}
               >
-                {Products[0].id === product.id ? (
-                  <span className="absolute left-0 top-4 px-3 text-[13px] font-medium tracking-wider bg-white">
-                    NEW
+                {product.label ? (
+                  <span
+                    className={`absolute left-0 top-4 px-3 py-[2px] text-[10px] font-semibold tracking-[0.2em] ${
+                      product.label === "NEW"
+                        ? "bg-white text-black"
+                        : "bg-black text-white"
+                    }`}
+                  >
+                    {product.label}
                   </span>
                 ) : (
                   ""
                 )}
+
+                {/* icons... */}
+                <ul className="card-icons">
+                  {CardIcons.map((icon) => {
+                    return (
+                      <li
+                        key={icon.id}
+                        className="bg-white p-2 cursor-pointer"
+                        title={icon.name}
+                      >
+                        <Image
+                          src={icon.image}
+                          width={16}
+                          height={16}
+                          alt={icon.name}
+                        />
+                      </li>
+                    );
+                  })}
+                </ul>
+
+                {/* add-to-cart button */}
+                <span className="cart-button">Add to Cart</span>
               </div>
 
               <div className="mt-3">
