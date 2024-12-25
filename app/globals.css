@@ -117,3 +117,27 @@ body {
 .group:hover .cart-button {
   @apply opacity-100 translate-y-0;
 }
+
+.group {
+  @apply relative overflow-hidden;
+}
+
+/* smooth card transition */
+.fade-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 500ms, transform 500ms;
+}
+.fade-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 500ms, transform 500ms;
+}

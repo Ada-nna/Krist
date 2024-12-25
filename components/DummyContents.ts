@@ -7,6 +7,7 @@ export const Products = [
     amount: "$107.99",
     rating: 4,
     label: "NEW",
+    oldPrice: ""
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const Products = [
     amount: "$67.24",
     rating: 3,
     label: "",
+    oldPrice: "",
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const Products = [
     amount: "$40.41",
     rating: 5,
     label: "SALE",
+    oldPrice: "$59.99",
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ export const Products = [
     amount: "$70.32",
     rating: 4,
     label: "",
+    oldPrice: "",
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ export const Products = [
     amount: "$55.40",
     rating: 3,
     label: "",
+    oldPrice: "",
   },
   {
     id: 6,
@@ -52,6 +57,7 @@ export const Products = [
     amount: "$49.66",
     rating: 4,
     label: "SALE",
+    oldPrice: "$62.09",
   },
   {
     id: 7,
@@ -61,6 +67,7 @@ export const Products = [
     amount: "$31.37",
     rating: 3,
     label: "",
+    oldPrice: "",
   },
   {
     id: 8,
@@ -70,6 +77,7 @@ export const Products = [
     amount: "$26.28",
     rating: 4,
     label: "",
+    oldPrice: "",
   },
 ];
 

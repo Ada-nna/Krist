@@ -96,7 +96,12 @@ const ProductList = () => {
                     )
                   )}
                 </div>
-                <p className="font-semibold">{product.amount}</p>
+                <p className="font-semibold">
+                  {product.amount}{" "}
+                  <span className="ml-3 text-[#b7b7b7] font-medium line-through">
+                    {product.label === "SALE" ? product.oldPrice : ""}
+                  </span>
+                </p>
               </div>
             </div>
           );
