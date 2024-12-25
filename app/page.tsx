@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/homepage/Hero";
+import Deals from "@/components/homepage/Deals";
 import Bestseller from "@/components/homepage/Bestseller";
 import OutfitCategories from "@/components/homepage/OutfitCategories";
 import CategoriesCarousel from "@/components/homepage/CategoriesCarousel";
@@ -12,6 +13,7 @@ const page = () => {
         {/* <OutfitCategories /> */}
         <CategoriesCarousel />
         <Bestseller />
+        <Deals />
       </div>
     </div>
   );
