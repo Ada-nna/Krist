@@ -130,3 +130,12 @@ export const SizeList = [
   { id: 5, option: "XXL", value: 10 },
   { id: 6, option: "XXXL", value: 2 },
 ];
+
+export const FilterOptions = [
+  { id: 1, option: "Recommended" },
+  { id: 2, option: "Most Popular" },
+  { id: 3, option: "New Arrivals" },
+  { id: 4, option: "Top Rated" },
+  { id: 5, option: "Low to High" },
+  { id: 6, option: "High to Low" },
+];

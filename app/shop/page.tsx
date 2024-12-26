@@ -1,6 +1,7 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import Sidebar from "@/components/shop/Sidebar";
+import ProductSection from "@/components/shop/ProductSection";
 
 const page = () => {
   return (
@@ -20,7 +21,9 @@ const page = () => {
         </div>
 
         {/* Products Section */}
-        <div className="border w-full">Products Section</div>
+        <div className="border w-full">
+          <ProductSection />
+        </div>
       </div>
     </div>
   );
