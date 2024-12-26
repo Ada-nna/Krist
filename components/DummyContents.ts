@@ -100,3 +100,33 @@ export const FooterServiceList = [
   { id: 3, list: "Delivery Information" },
   { id: 4, list: "Return & Exchanges" },
 ];
+
+export const SidebarList = [
+  { id: 1, option: "Men" },
+  { id: 2, option: "Women" },
+  { id: 3, option: "Kids" },
+  { id: 4, option: "Bags" },
+  { id: 5, option: "Belts" },
+  { id: 6, option: "Wallets" },
+  { id: 7, option: "Watches" },
+  { id: 8, option: "Accessories" },
+  { id: 9, option: "Winter Wear" },
+];
+
+export const ColorList = [
+  { id: 1, option: "Red", value: 10, background: "bg-red-500" },
+  { id: 2, option: "Blue", value: 14, background: "bg-blue-500" },
+  { id: 3, option: "Orange", value: 8, background: "bg-orange-500" },
+  { id: 4, option: "Black", value: 12, background: "bg-black" },
+  { id: 5, option: "Green", value: 9, background: "bg-green-500" },
+  { id: 6, option: "Yellow", value: 2, background: "bg-yellow-500" },
+];
+
+export const SizeList = [
+  { id: 1, option: "S", value: 6 },
+  { id: 2, option: "M", value: 20 },
+  { id: 3, option: "L", value: 7 },
+  { id: 4, option: "XL", value: 16 },
+  { id: 5, option: "XXL", value: 10 },
+  { id: 6, option: "XXXL", value: 2 },
+];
