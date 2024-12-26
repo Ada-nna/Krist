@@ -7,7 +7,7 @@ export const Products = [
     amount: "$107.99",
     rating: 4,
     label: "NEW",
-    oldPrice: ""
+    oldPrice: "",
   },
   {
     id: 2,
@@ -85,4 +85,18 @@ export const CardIcons = [
   { id: 1, image: "/heart.png", name: "heart" },
   { id: 2, image: "/compare.png", name: "compare" },
   { id: 3, image: "/search.png", name: "search" },
+];
+
+export const FooterShoppingList = [
+  { id: 1, list: "Clothing Store" },
+  { id: 2, list: "Trending Shoes" },
+  { id: 3, list: "Accessories" },
+  { id: 4, list: "Sale" },
+];
+
+export const FooterServiceList = [
+  { id: 1, list: "Contact Us" },
+  { id: 2, list: "Payment Method" },
+  { id: 3, list: "Delivery Information" },
+  { id: 4, list: "Return & Exchanges" },
 ];

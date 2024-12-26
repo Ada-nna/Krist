@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavbarWrapper from "@/components/fixed/NavbarWrapper";
+import FooterWrapper from "@/components/fixed/FooterWrapper";
 
 export const metadata: Metadata = {
   title: "Krist App",
@@ -21,11 +22,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>
-        <>
-          <NavbarWrapper />
-          {children}
-        </>
+      <body className="min-h-screen flex flex-col">
+        <NavbarWrapper />
+        <main className="flex-1">{children}</main>
+        <FooterWrapper />
       </body>
     </html>
   );

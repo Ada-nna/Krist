@@ -11,12 +11,8 @@ import {
 
 const CategoriesCarousel = () => {
   return (
-    <div className="mt-[5rem]">
-      <h1 className="text-center font-medium md:text-[24px]">
-        Shop by Categories
-      </h1>
-
-      <div className="relative w-full max-w-full mt-[2rem]">
+    <>
+      <div className="relative w-full max-w-full mt-[5rem]">
         <Carousel
           opts={{
             align: "center",
@@ -148,7 +144,7 @@ const CategoriesCarousel = () => {
           <CarouselNext />
         </Carousel>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import ProductList from "./ProductList";
 import { CardIcons, Products } from "../DummyContents";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
