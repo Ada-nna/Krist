@@ -21,7 +21,7 @@ const page = () => {
         </div>
 
         {/* Products Section */}
-        <div className="border w-full">
+        <div className="w-full">
           <ProductSection />
         </div>
       </div>

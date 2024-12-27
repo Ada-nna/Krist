@@ -15,7 +15,7 @@ const Sidebar = () => {
     <aside>
       <div>
         <div className="flex items-center justify-between">
-          <h2 className="font-medium">Product Categories</h2>
+          <h2 className="font-medium text-[14px]">Product Categories</h2>
           <button
             onClick={() =>
               setIsProductCategoryExpanded(!isProductCategoryExpanded)
@@ -23,9 +23,9 @@ const Sidebar = () => {
             className="focus:outline-none"
           >
             {isProductCategoryExpanded ? (
-              <ChevronUp size={20} />
+              <ChevronUp size={16} />
             ) : (
-              <ChevronDown size={20} />
+              <ChevronDown size={16} />
             )}
           </button>
         </div>
@@ -55,7 +55,7 @@ const Sidebar = () => {
       <hr className="border my-5" />
 
       <div className="pb-3">
-        <h2 className="font-medium">Filter by Price</h2>
+        <h2 className="font-medium text-[14px]">Filter by Price</h2>
         <p className="text-[14px] mb-5 mt-3">
           Price <span>${range[0]}</span> - <span>${range[1]}</span>
         </p>
@@ -73,15 +73,15 @@ const Sidebar = () => {
 
       <div>
         <div className="flex items-center justify-between">
-          <h2 className="font-medium">Filter by Color</h2>
+          <h2 className="font-medium text-[14px]">Filter by Color</h2>
           <button
             onClick={() => setIsColorCategoryExpanded(!isColorCategoryExpanded)}
             className="focus:outline-none"
           >
             {isColorCategoryExpanded ? (
-              <ChevronUp size={20} />
+              <ChevronUp size={16} />
             ) : (
-              <ChevronDown size={20} />
+              <ChevronDown size={16} />
             )}
           </button>
         </div>
@@ -112,15 +112,15 @@ const Sidebar = () => {
 
       <div>
         <div className="flex items-center justify-between">
-          <h2 className="font-medium">Filter by Size</h2>
+          <h2 className="font-medium text-[14px]">Filter by Size</h2>
           <button
             onClick={() => setIsSizeCategoryExpanded(!isSizeCategoryExpanded)}
             className="focus:outline-none"
           >
             {isSizeCategoryExpanded ? (
-              <ChevronUp size={20} />
+              <ChevronUp size={16} />
             ) : (
-              <ChevronDown size={20} />
+              <ChevronDown size={16} />
             )}
           </button>
         </div>
