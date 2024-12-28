@@ -262,3 +262,27 @@ export const FullProducts = [
     oldPrice: "",
   },
 ];
+
+export const ProductDetails = {
+  id: 1,
+  productName: "Hooded Thermal Anorak",
+  image: "/product-big-1.png",
+  rating: 5,
+  newPrice: "$107.99",
+  oldPrice: "$159.99",
+  productDescription:
+    "Coat with quilted lining and an adjustable hood. Featuring long sleeves with adjustable cuff tabs, adjustable asymmetric hem with elastic side tabs and a front zip fastening with placket.",
+  redColor: "bg-red-500",
+  blueColor: "bg-blue-500",
+  orangeColor: "bg-orange-500",
+  blackColor: "bg-black",
+  greenColor: "bg-green-500",
+  yellowColor: "bg-yellow-500",
+  sizeS: "S",
+  sizeM: "M",
+  sizeL: "L",
+  sizeXL: "XL",
+  sizeXXL: "XXL",
+  sizeXXXL: "XXXL",
+  
+};

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import PaginationComponent from "../PaginationComponent";
 import { FullProducts, CardIcons } from "../DummyContents";
 
 const ProductCards = () => {
@@ -109,6 +110,11 @@ const ProductCards = () => {
             })}
           </div>
         </div>
+      </div>
+
+      {/* Pagination rendering */}
+      <div className="mt-[5rem]">
+        <PaginationComponent />
       </div>
     </div>
   );
