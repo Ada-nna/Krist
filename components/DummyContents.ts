@@ -284,5 +284,18 @@ export const ProductDetails = {
   sizeXL: "XL",
   sizeXXL: "XXL",
   sizeXXXL: "XXXL",
-  
 };
+
+export const SmallImageSizes = [
+  { id: 1, image: "/thumb-1.png" },
+  { id: 2, image: "/thumb-2.png" },
+  { id: 3, image: "/thumb-3.png" },
+  { id: 4, image: "/thumb-4.png" },
+];
+
+export const LargeImageSizes = [
+  { id: 1, image: "/product-big-1.png" },
+  { id: 2, image: "/product-big-2.png" },
+  { id: 3, image: "/product-big-3.png" },
+  { id: 4, image: "/product-big-2.png" },
+];
