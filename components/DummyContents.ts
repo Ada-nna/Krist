@@ -299,3 +299,6 @@ export const LargeImageSizes = [
   { id: 3, image: "/product-big-3.png" },
   { id: 4, image: "/product-big-2.png" },
 ];
+
+// product details...
+export const headings = ["Descriptions", "Additional Information", "Reviews"];

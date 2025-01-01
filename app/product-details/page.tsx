@@ -9,6 +9,8 @@ import {
   SizeList,
   SmallImageSizes,
 } from "@/components/DummyContents";
+import RelatedProducts from "@/components/productDetails/RelatedProducts";
+import ProductInformation from "@/components/productDetails/ProductInformation";
 
 const page = () => {
   const [count, setCount] = useState<number>(1);
@@ -142,7 +144,7 @@ const page = () => {
                   <div key={color.id}>
                     <button
                       type="button"
-                      className={`rounded-[4px] w-[30px] h-[30px] ${color.background}`}
+                      className={`rounded-full w-[30px] h-[30px] ${color.background}`}
                     />
                   </div>
                 );
@@ -158,7 +160,7 @@ const page = () => {
                   <div key={size.id}>
                     <button
                       type="button"
-                      className={`rounded-[4px] border px-3 py-[6px] text-[14px] my-3 ${
+                      className={`rounded-full border px-3 py-[6px] text-[14px] my-3 ${
                         activeSizeState === size.id
                           ? "bg-black text-white border-black"
                           : "bg-white text-black border-black"
@@ -180,7 +182,7 @@ const page = () => {
                   type="number"
                   value={count}
                   readOnly
-                  className="w-full outline-none text-center text-[18px] cursor-default px-2 py-2 border-black border rounded-[4px]"
+                  className="w-full outline-none text-center text-[18px] cursor-default px-2 py-2 border-black border rounded-full"
                 />
               </div>
               <button
@@ -228,12 +230,12 @@ const page = () => {
               </button>
             </div>
 
-            <button className="px-20 py-3 rounded-[4px] border border-black bg-black text-white text-[14px] ml-3">
+            <button className="px-20 py-3 rounded-full border border-black bg-black text-white text-[14px] ml-3">
               Add to Cart
             </button>
 
             <button
-              className="mx-3 border border-black p-3 rounded-[4px]"
+              className="mx-3 border border-black p-3 rounded-full"
               onClick={handleHeartClick}
             >
               <svg
@@ -256,9 +258,13 @@ const page = () => {
         </div>
       </div>
 
-      <div> 
-        
+      <div className="mt-[5rem]">
+        <ProductInformation />
       </div>
+
+    <div className="mt-[5rem]">
+      <RelatedProducts />
+    </div>
     </section>
   );
 };
