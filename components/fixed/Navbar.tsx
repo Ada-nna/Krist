@@ -4,9 +4,10 @@ import { useState, MouseEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/klogo.svg";
-import { ChevronDown, Menu, X } from "lucide-react";
 import { useRouter } from "next/navigation";
+import CartItems from "../popovers/CartItems";
 import ShopContent from "../popovers/ShopContent";
+import { ChevronDown, Menu, X } from "lucide-react";
 import {
   Popover,
   PopoverContent,
@@ -103,30 +104,37 @@ const Navbar = () => {
               ></path>
             </svg>
           </button>
-          <button>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                d="M8.4 6.5h7.2c3.4 0 3.74 1.59 3.97 3.53l.9 7.5C20.76 19.99 20 22 16.5 22H7.51C4 22 3.24 19.99 3.54 17.53l.9-7.5C4.66 8.09 5 6.5 8.4 6.5Z"
-                stroke="#000"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              ></path>
-              <path
-                d="M8 8V4.5C8 3 9 2 10.5 2h3C15 2 16 3 16 4.5V8M20.41 17.03H8"
-                stroke="#000"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              ></path>
-            </svg>
-          </button>
+          {/* cart icon */}
+          <Popover>
+            <PopoverTrigger>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M8.4 6.5h7.2c3.4 0 3.74 1.59 3.97 3.53l.9 7.5C20.76 19.99 20 22 16.5 22H7.51C4 22 3.24 19.99 3.54 17.53l.9-7.5C4.66 8.09 5 6.5 8.4 6.5Z"
+                  stroke="#000"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+                <path
+                  d="M8 8V4.5C8 3 9 2 10.5 2h3C15 2 16 3 16 4.5V8M20.41 17.03H8"
+                  stroke="#000"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+              </svg>
+            </PopoverTrigger>
+            <PopoverContent>
+              <CartItems />
+            </PopoverContent>
+          </Popover>
+
           <button className="flex items-center gap-1 py-2 px-6 text-white bg-black rounded-full text-[13px] transition-all duration-300 hover:bg-gray-800 hover:shadow-lg hover:scale-105">
             <span className="transition-transform duration-300 group-hover:translate-x-1">
               Login
