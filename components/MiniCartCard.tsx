@@ -18,9 +18,9 @@ const MiniCartCard: React.FC<MiniCartCardProps> = ({
   productSize,
 }) => {
   return (
-    <div className="flex items-center gap-4">
+    <div className="w-full flex items-center gap-4">
       <div
-        className="relative border h-[60px] w-full md:w-[60px]"
+        className="relative border h-[50px] w-full md:w-[80px]"
         style={{
           backgroundImage: `url(${productImage})`,
           backgroundPosition: "center",
@@ -29,9 +29,9 @@ const MiniCartCard: React.FC<MiniCartCardProps> = ({
         }}
       ></div>
 
-      <div>
+      <div className="w-full">
         <p className="text-[12px]">{productName}</p>
-        <h1 className="text-[13px]">{`${productQuantity} x $${productPrice}`}</h1>
+        <h1 className="text-[13px] font-semibold">{`${productQuantity} x $${productPrice}`}</h1>
         <div className="flex items-center justify-between">
           <p className="text-[12px]">Size: {productSize}</p>
           <button>
