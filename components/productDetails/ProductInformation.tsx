@@ -21,7 +21,7 @@ const ProductInformation = () => {
               key={heading}
               className={`text-center font-medium md:text-[20px] cursor-pointer ${
                 activeState === heading
-                  ? "text-black border-b-2 border-black"
+                  ? "text-black border-b-2"
                   : "text-[#b7b7b7]"
               }`}
               onClick={() => handleHeadingClick(heading)}
@@ -89,7 +89,7 @@ const ProductInformation = () => {
                       >
                         <path
                           d="m13.73 3.51 1.76 3.52c.24.49.88.96 1.42 1.05l3.19.53c2.04.34 2.52 1.82 1.05 3.28l-2.48 2.48c-.42.42-.65 1.23-.52 1.81l.71 3.07c.56 2.43-.73 3.37-2.88 2.1l-2.99-1.77c-.54-.32-1.43-.32-1.98 0l-2.99 1.77c-2.14 1.27-3.44.32-2.88-2.1l.71-3.07c.13-.58-.1-1.39-.52-1.81l-2.48-2.48c-1.46-1.46-.99-2.94 1.05-3.28l3.19-.53c.53-.09 1.17-.56 1.41-1.05l1.76-3.52c.96-1.91 2.52-1.91 3.47 0Z"
-                          stroke="black"
+                          stroke="#b7b7b7"
                           strokeWidth="1.5"
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -105,7 +105,7 @@ const ProductInformation = () => {
                     <input
                       type="text"
                       placeholder="Enter your name"
-                      className="border border-black p-3 rounded-[6px] text-[14px] outline-none"
+                      className="border p-3 rounded-[6px] text-[14px] outline-none"
                     />
                   </div>
                   <div className="flex flex-col my-3">
@@ -115,7 +115,7 @@ const ProductInformation = () => {
                     <input
                       type="email"
                       placeholder="examplejs@abc.com"
-                      className="border border-black p-3 rounded-[6px] text-[14px] outline-none"
+                      className="border p-3 rounded-[6px] text-[14px] outline-none"
                     />
                   </div>
                   <div className="flex flex-col my-3">
@@ -125,7 +125,7 @@ const ProductInformation = () => {
                     <textarea
                       cols={50}
                       rows={5}
-                      className="border border-black px-3 py-2 rounded-[6px] text-[14px] outline-none"
+                      className="border px-3 py-2 rounded-[6px] text-[14px] outline-none"
                     />
                   </div>
                   <button
