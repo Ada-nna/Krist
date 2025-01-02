@@ -302,3 +302,34 @@ export const LargeImageSizes = [
 
 // product details...
 export const headings = ["Descriptions", "Additional Information", "Reviews"];
+
+// checkout table...
+export const CheckoutTableData = [
+  {
+    id: 1,
+    productName: "Dove Sneakers",
+    productSize: "M",
+    productImage: "/product-1.jpg",
+    productQuantity: 1,
+    productPrice: 107.99,
+    totalPrice: 107.99,
+  },
+  {
+    id: 2,
+    productName: "Green Camo Hoodie",
+    productSize: "XL",
+    productImage: "/product-12.jpg",
+    productQuantity: 1,
+    productPrice: 55.4,
+    totalPrice: 55.4,
+  },
+  {
+    id: 3,
+    productName: "ZVA 3-in-one Perfume",
+    productSize: "Full set",
+    productImage: "/product-10.jpg",
+    productQuantity: 2,
+    productPrice: 40.41,
+    totalPrice: 80.82,
+  },
+];

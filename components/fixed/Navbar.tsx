@@ -130,7 +130,7 @@ const Navbar = () => {
                 ></path>
               </svg>
             </PopoverTrigger>
-            <PopoverContent>
+            <PopoverContent align="end">
               <CartItems />
             </PopoverContent>
           </Popover>
