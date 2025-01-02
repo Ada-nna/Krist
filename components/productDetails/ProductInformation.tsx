@@ -7,7 +7,6 @@ import AdditionalInformation from "./AdditionalInformation";
 
 const ProductInformation = () => {
   const [activeState, setActiveState] = useState("Descriptions");
-  const [isStarSelected, setIsStarSelected] = useState(null);
 
   const handleHeadingClick = (heading: string) => {
     setActiveState(heading);

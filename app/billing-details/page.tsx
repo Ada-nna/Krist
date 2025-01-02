@@ -1,12 +1,85 @@
-import React from "react";
-import { Tag } from "lucide-react";
-import BillingForm from "@/components/BillingForm";
+"use client";
+import React, { useState } from "react";
+import BillingForm from "@/components/billingDetails/BillingForm";
+import PaymentMethod from "@/components/billingDetails/PaymentMethod";
+import { CreditCard, House, ReceiptText, Tag } from "lucide-react";
 
 const page = () => {
+  const [isActiveTab, setIsActiveTab] = useState<string>("Address");
+
+  const handleIconClick = () => {
+    setIsActiveTab("Address");
+  };
+
   return (
     <section className="container flex-1 mt-4 px-4 md:px-6 py-4 md:py-6">
-      <div className="w-full flex items-start md:gap-6">
+      <div className="w-full flex items-start md:gap-[5rem]">
         <div className="w-2/3">
+          <div className="mb-4">
+            {isActiveTab === "Address" && (
+              <h1 className="md:text-[22px] font-medium">Billing Address</h1>
+            )}
+            {isActiveTab === "Payment Method" && (
+              <h1 className="md:text-[22px] font-medium">Payment Method</h1>
+            )}
+            {isActiveTab === "Review" && (
+              <h1 className="md:text-[22px] font-medium">Address</h1>
+            )}
+          </div>
+
+          {/* icons...  */}
+          <section className="mb-8 ">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center w-full">
+                <button
+                  onClick={() => setIsActiveTab("Address")}
+                  className={`${
+                    isActiveTab === "Address"
+                      ? "bg-black text-white"
+                      : "bg-[#f5f5f5] text-black"
+                  } p-3 rounded-full`}
+                >
+                  <House size={24} strokeWidth={1} />
+                </button>
+                <hr className="w-full border border-dashed flex-grow" />
+              </div>
+
+              <div className="flex items-center w-full">
+                <button
+                  onClick={() => setIsActiveTab("Payment Method")}
+                  className={`${
+                    isActiveTab === "Payment Method"
+                      ? "bg-black text-white"
+                      : "bg-[#f5f5f5] text-black"
+                  } p-3 rounded-full`}
+                >
+                  <CreditCard size={24} strokeWidth={1} />
+                </button>
+                <hr className="w-full border border-dashed flex-grow" />
+              </div>
+
+              <div className="flex items-center">
+                <button
+                  onClick={() => setIsActiveTab("Review")}
+                  className={`${
+                    isActiveTab === "Review"
+                      ? "bg-black text-white"
+                      : "bg-[#f5f5f5] text-black"
+                  } p-3 rounded-full`}
+                >
+                  <ReceiptText size={24} strokeWidth={1} />
+                </button>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between mt-2">
+              <span className="text-[14px]">Address</span>
+              <span className="text-[14px]">Payment Method</span>
+              <span className="text-[14px]">Review</span>
+            </div>
+          </section>
+          {/* icons end here... */}
+
           <div className="border-t-2 border-[#4CBB17] bg-[#f5f5f5] p-4 flex items-center gap-3 tracking-wide">
             <Tag size={16} strokeWidth={1} className="transform rotate-90" />
             <p className="text-[14px]">
@@ -15,14 +88,17 @@ const page = () => {
             </p>
           </div>
 
-          <div className="mt-4">
-            <h1 className="md:text-[22px] font-medium">Billing Details</h1>
-            <hr className="w-full my-4" />
-          </div>
+          {isActiveTab === "Address" && (
+            <div>
+              <BillingForm />
+            </div>
+          )}
 
-          <div>
-            <BillingForm />
-          </div>
+          {isActiveTab === "Payment Method" && (
+            <div>
+              <PaymentMethod />
+            </div>
+          )}
         </div>
 
         <div className="bg-[#f3f3f3] p-6 w-1/3 h-auto">
@@ -53,7 +129,7 @@ const page = () => {
             <p>$249.20</p>
           </div>
 
-          <button className="bg-black mt-4 p-3 w-full text-[14px] text-white rounded-full hover:scale-105 transition-all duration-300 active:text-[#f3f3f3]">
+          <button className="bg-black mt-[3rem] p-3 w-full text-[14px] text-white rounded-full hover:scale-105 transition-all duration-300 active:text-[#f3f3f3]">
             Proceed to Checkout
           </button>
         </div>

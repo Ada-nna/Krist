@@ -3,7 +3,7 @@ import React from "react";
 const BillingForm = () => {
   return (
     <section>
-      <div className="w-full flex items-center gap-6">
+      <div className="w-full flex items-center gap-6 mt-8">
         <div className="flex flex-col w-1/2">
           <label className="text-[14px] md:text-base" htmlFor="first-name">
             First Name<span className="text-[red]">*</span>
