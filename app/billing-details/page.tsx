@@ -1,14 +1,18 @@
 "use client";
 import React, { useState } from "react";
+import Review from "@/components/billingDetails/Review";
 import BillingForm from "@/components/billingDetails/BillingForm";
-import PaymentMethod from "@/components/billingDetails/PaymentMethod";
+import PlaceOrderModal from "@/components/modals/PlaceOrderModal";
 import { CreditCard, House, ReceiptText, Tag } from "lucide-react";
+import PaymentMethod from "@/components/billingDetails/PaymentMethod";
 
 const page = () => {
   const [isActiveTab, setIsActiveTab] = useState<string>("Address");
+  const [isPlaceOrderModalOpen, setIsPlaceOrderModalOpen] =
+    useState<boolean>(false);
 
-  const handleIconClick = () => {
-    setIsActiveTab("Address");
+  const handlePlaceOrderBtnClick = () => {
+    setIsPlaceOrderModalOpen(true);
   };
 
   return (
@@ -99,6 +103,12 @@ const page = () => {
               <PaymentMethod />
             </div>
           )}
+
+          {isActiveTab === "Review" && (
+            <div>
+              <Review />
+            </div>
+          )}
         </div>
 
         <div className="bg-[#f3f3f3] p-6 w-1/3 h-auto">
@@ -112,7 +122,7 @@ const page = () => {
             <div className="flex items-center mt-3">
               <input
                 placeholder="Coupon code"
-                className="bg-white border px-6 py-3 text-[14px] w-2/3 rounded-l-full"
+                className="bg-white px-6 py-3 text-[14px] w-2/3 rounded-l-full"
               />
               <button className="bg-black p-3 w-1/3 text-[14px] text-white rounded-r-full hover:text-[#b7b7b7] hover:duration-300 transition-all duration-300 active:text-[#f3f3f3]">
                 Apply
@@ -129,10 +139,20 @@ const page = () => {
             <p>$249.20</p>
           </div>
 
-          <button className="bg-black mt-[3rem] p-3 w-full text-[14px] text-white rounded-full hover:scale-105 transition-all duration-300 active:text-[#f3f3f3]">
-            Proceed to Checkout
+          <button
+            onClick={handlePlaceOrderBtnClick}
+            className="bg-black mt-[3rem] p-3 w-full text-[14px] text-white rounded-full hover:scale-105 transition-all duration-300 active:text-[#f3f3f3]"
+          >
+            Place Order
           </button>
         </div>
+
+        {isPlaceOrderModalOpen && (
+          <PlaceOrderModal
+            isOpen={isPlaceOrderModalOpen}
+            setIsOpen={setIsPlaceOrderModalOpen}
+          />
+        )}
       </div>
     </section>
   );

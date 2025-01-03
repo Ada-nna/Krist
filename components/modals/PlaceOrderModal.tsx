@@ -7,12 +7,12 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 
-interface PasswordChangeModalProps {
+interface PlaceOrderModalProps {
   isOpen: boolean;
   setIsOpen: (value: boolean) => void;
 }
 
-const PasswordChangeModal: React.FC<PasswordChangeModalProps> = ({
+const PlaceOrderModal: React.FC<PlaceOrderModalProps> = ({
   isOpen,
   setIsOpen,
 }) => {
@@ -35,17 +35,30 @@ const PasswordChangeModal: React.FC<PasswordChangeModalProps> = ({
             </div>
 
             <div className="flex flex-col items-center justify-center mt-5">
-              <h1 className="md:text-[24px] font-medium">Success</h1>
-              <p className="text-[14px] md:text-base text-[#A4A1AA] mt-3">
-                Your password has been updated successfully.
+              <h1 className="md:text-[20px] font-medium">
+                Your order is confirmed
+              </h1>
+              <p className="text-[14px] text-[#A4A1AA] mt-3 text-center">
+                Thanks for shopping! Your order is confirmed and will be shipped
+                soon.
               </p>
-              <button
-                type="button"
-                onClick={() => route.push("/login")}
-                className="bg-black rounded-full text-[#ffffff] mt-[30px] w-full py-[17px]"
-              >
-                Back to login
-              </button>
+
+              <div className="mt-8 w-full">
+                <button
+                  type="button"
+                  onClick={() => route.push("/product-details")}
+                  className="bg-black rounded-full text-[#ffffff] w-full py-[17px]"
+                >
+                  View Order
+                </button>
+                <button
+                  type="button"
+                  onClick={() => route.push("/")}
+                  className="bg-black rounded-full text-[#ffffff] mt-4 w-full py-[17px]"
+                >
+                  Back to Home
+                </button>
+              </div>
             </div>
           </DialogDescription>
         </DialogContent>
@@ -54,4 +67,4 @@ const PasswordChangeModal: React.FC<PasswordChangeModalProps> = ({
   );
 };
 
-export default PasswordChangeModal;
+export default PlaceOrderModal;
