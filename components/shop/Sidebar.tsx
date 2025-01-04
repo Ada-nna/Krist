@@ -6,7 +6,7 @@ import { Plus, ChevronUp, ChevronDown } from "lucide-react";
 import { SidebarList, ColorList, SizeList } from "../DummyContents";
 
 const Sidebar = () => {
-  const [range, setRange] = useState([10, 2000]);
+  const [range, setRange] = useState([1, 2000]);
   const [isProductCategoryExpanded, setIsProductCategoryExpanded] =
     useState(false);
   const [isSizeCategoryExpanded, setIsSizeCategoryExpanded] = useState(false);
@@ -62,7 +62,7 @@ const Sidebar = () => {
         <Slider
           value={range}
           onValueChange={(newRange) => setRange(newRange)}
-          min={0}
+          min={1}
           max={2000}
           step={10}
           className="w-full h-[2px] bg-black"

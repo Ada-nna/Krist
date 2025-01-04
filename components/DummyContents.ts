@@ -333,3 +333,51 @@ export const CheckoutTableData = [
     totalPrice: 80.82,
   },
 ];
+
+import {
+  UserRound,
+  Package,
+  Heart,
+  MapPin,
+  CreditCard,
+  Bell,
+  Settings,
+} from "lucide-react";
+
+export const ProfileSidebarList = [
+  {
+    id: 1,
+    option: "Profile",
+    icon: { icon: UserRound, size: 16, strokeWidth: 1 },
+  },
+  {
+    id: 2,
+    option: "My Orders",
+    icon: { icon: Package, size: 16, strokeWidth: 1 },
+  },
+  {
+    id: 3,
+    option: "My Wishlist",
+    icon: { icon: Heart, size: 16, strokeWidth: 1 },
+  },
+  {
+    id: 4,
+    option: "Manage  Address",
+    icon: { icon: MapPin, size: 16, strokeWidth: 1 },
+  },
+  {
+    id: 5,
+    option: "Saved Cards",
+    icon: { icon: CreditCard, size: 16, strokeWidth: 1 },
+  },
+  {
+    id: 6,
+    option: "Notifications",
+    icon: { icon: Bell, size: 16, strokeWidth: 1 },
+  },
+  {
+    id: 7,
+    option: "Settings",
+    icon: { icon: Settings, size: 16, strokeWidth: 1 },
+  },
+];
