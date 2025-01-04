@@ -22,8 +22,10 @@ const Footer = () => {
           <ul className="flex flex-col gap-3 text-[14px] text-[#b7b7b7]">
             {FooterShoppingList.map((item) => {
               return (
-                <Link href="/">
-                  <li key={item.id}>{item.list}</li>
+                <Link href="/" key={item.id}>
+                  <li className="hover:text-[#f3f3f3] hover:duration-300">
+                    {item.list}
+                  </li>
                 </Link>
               );
             })}

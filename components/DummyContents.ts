@@ -126,7 +126,7 @@ export const SizeList = [
   { id: 1, option: "S", value: 6 },
   { id: 2, option: "M", value: 20 },
   { id: 3, option: "L", value: 7 },
-  { id: 4, option: "XL", value: 16 },
+  { id: 4, option: "XL", value: 18 },
   { id: 5, option: "XXL", value: 10 },
   { id: 6, option: "XXXL", value: 2 },
 ];
@@ -313,6 +313,10 @@ export const CheckoutTableData = [
     productQuantity: 1,
     productPrice: 107.99,
     totalPrice: 107.99,
+    status: "Delivered",
+    message: "Your order has been delivered",
+    btn1: "View Order",
+    btn2: "Write a Review",
   },
   {
     id: 2,
@@ -322,6 +326,10 @@ export const CheckoutTableData = [
     productQuantity: 1,
     productPrice: 55.4,
     totalPrice: 55.4,
+    status: "In Transit",
+    message: "Your order is in transit",
+    btn1: "Track Order",
+    btn2: "Write a Review",
   },
   {
     id: 3,
@@ -331,8 +339,37 @@ export const CheckoutTableData = [
     productQuantity: 2,
     productPrice: 40.41,
     totalPrice: 80.82,
+    status: "Cancelled",
+    message: "Your order has been cancelled",
+    btn1: "View Order",
   },
 ];
+
+export const getOrderStatusColor = (status: string) => {
+  switch (status) {
+    case "Delivered":
+      return "text-[#3CD139]";
+    case "In Transit":
+      return "text-[#E3B231]";
+    case "Cancelled":
+      return "text-[red]";
+    default:
+      return "text-black";
+  }
+};
+
+export const getOrderStatusBgColor = (status: string) => {
+  switch (status) {
+    case "Delivered":
+      return "bg-[#ecfbec]";
+    case "In Transit":
+      return "bg-[#fdf8eb]";
+    case "Cancelled":
+      return "bg-red-100";
+    default:
+      return "bg-transparent";
+  }
+};
 
 import {
   UserRound,
@@ -348,36 +385,36 @@ export const ProfileSidebarList = [
   {
     id: 1,
     option: "Profile",
-    icon: { icon: UserRound, size: 16, strokeWidth: 1 },
+    icon: { icon: UserRound, size: 18, strokeWidth: 1.5 },
   },
   {
     id: 2,
     option: "My Orders",
-    icon: { icon: Package, size: 16, strokeWidth: 1 },
+    icon: { icon: Package, size: 18, strokeWidth: 1.5 },
   },
   {
     id: 3,
     option: "My Wishlist",
-    icon: { icon: Heart, size: 16, strokeWidth: 1 },
+    icon: { icon: Heart, size: 18, strokeWidth: 1.5 },
   },
   {
     id: 4,
     option: "Manage  Address",
-    icon: { icon: MapPin, size: 16, strokeWidth: 1 },
+    icon: { icon: MapPin, size: 18, strokeWidth: 1.5 },
   },
   {
     id: 5,
     option: "Saved Cards",
-    icon: { icon: CreditCard, size: 16, strokeWidth: 1 },
+    icon: { icon: CreditCard, size: 18, strokeWidth: 1.5 },
   },
   {
     id: 6,
     option: "Notifications",
-    icon: { icon: Bell, size: 16, strokeWidth: 1 },
+    icon: { icon: Bell, size: 18, strokeWidth: 1.5 },
   },
   {
     id: 7,
     option: "Settings",
-    icon: { icon: Settings, size: 16, strokeWidth: 1 },
+    icon: { icon: Settings, size: 18, strokeWidth: 1.5 },
   },
 ];
