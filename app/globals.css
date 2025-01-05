@@ -111,7 +111,7 @@ body {
 
 /* cart button */
 .cart-button {
-  @apply absolute bottom-4 left-4 p-2 bg-white w-[90%] rounded-full text-[14px] text-[red] font-medium flex justify-center items-center z-50 gap-2 opacity-0 translate-y-[50px] transition-all duration-500;
+  @apply absolute bottom-4 left-4 p-2 bg-white w-[90%] rounded-full text-[14px] font-medium flex justify-center items-center z-50 gap-2 opacity-0 translate-y-[50px] transition-all duration-500;
 }
 
 .group:hover .cart-button {

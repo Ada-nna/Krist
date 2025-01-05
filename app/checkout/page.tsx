@@ -41,7 +41,7 @@ const page = () => {
             <p>$249.20</p>
           </div>
 
-          <button className="bg-black mt-4 p-3 w-full text-[14px] text-white rounded-full hover:scale-105 transition-all duration-300 active:text-[#f3f3f3]">
+          <button className="bg-black mt-8 p-3 w-full text-[14px] text-white rounded-full hover:scale-105 transition-all duration-300 active:text-[#f3f3f3]">
             Proceed to Checkout
           </button>
         </div>

@@ -418,3 +418,39 @@ export const ProfileSidebarList = [
     icon: { icon: Settings, size: 18, strokeWidth: 1.5 },
   },
 ];
+
+export const ClientsContactList = [
+  {
+    id: 1,
+    name: "Cynthia Okafor",
+    clientAddress: "4517 Washington Ave. Ilorin, Abuja, Saudi Arabia",
+    phoneNumber: "(234) 8101-0404-123",
+  },
+  {
+    id: 2,
+    name: "Jennifer Williams",
+    clientAddress: "4517 Washington Ave. Ilorin, Abuja, Saudi Arabia",
+    phoneNumber: "(234) 8101-0404-123",
+  },
+  {
+    id: 3,
+    name: "Alexa Johnson",
+    clientAddress: "4517 Washington Ave. Ilorin, Abuja, Saudi Arabia",
+    phoneNumber: "(234) 8101-0404-123",
+  },
+];
+
+export const SavedCardList = [
+  {
+    id: 1,
+    name: "Mastercard",
+    cardNo: "3456 **** **** **78",
+    logoImg: "/mastercard-logo.png",
+  },
+  {
+    id: 2,
+    name: "Visa",
+    cardNo: "5677 **** **** **23",
+    logoImg: "/visa-logo.png",
+  },
+];

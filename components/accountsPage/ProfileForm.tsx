@@ -21,8 +21,8 @@ const ProfileForm = () => {
           </button>
         </div>
 
-        <button className="bg-black py-3 px-6 text-[14px] text-white rounded-full transition-all duration-300 active:text-[#b7b7b7]">
-          Edit Profile
+        <button className="bg-black py-3 px-6 flex items-center gap-2 text-[14px] text-white rounded-full transition-all duration-300 active:text-[#b7b7b7]">
+          <Pencil size={16} color="white" /> <span>Edit Profile</span>
         </button>
       </div>
 

@@ -1,10 +1,17 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Heart, Mail } from "lucide-react";
 import { FooterServiceList, FooterShoppingList } from "../DummyContents";
 
 const Footer = () => {
+  const [timestamp, setTimestamp] = useState<number>(0);
+
+  useEffect(() => {
+    setTimestamp(new Date().getFullYear());
+  }, []);
+
   return (
     <div className="mt-[5rem] bg-[#111111] p-8 md:p-10 text-white">
       <div className="grid grid-cols-1 md:grid-cols-4">
@@ -70,8 +77,7 @@ const Footer = () => {
       <hr className="border-[#b7b7b7] w-full mt-[3rem]" />
 
       <p className="text-[10px] md:text-[12px] text-[#b7b7b7] text-center mt-3 tracking-wider flex items-center justify-center">
-        Copyright © {new Date().getFullYear()} All rights reserved | This
-        website was made with{" "}
+        Copyright © {timestamp} All rights reserved | This website was made with{" "}
         <span className="px-1">
           <Heart color="red" size={14} />{" "}
         </span>{" "}

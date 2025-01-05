@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import { Trash2 } from "lucide-react";
 import PaginationComponent from "../PaginationComponent";
 import { FullProducts, CardIcons } from "../DummyContents";
 
-const ProductCards = () => {
+const WishlistCard = () => {
   return (
     <div>
       <div className="mt-[3rem]">
@@ -35,26 +36,13 @@ const ProductCards = () => {
                       ""
                     )}
 
-                    {/* Icons */}
-                    <ul className="card-icons">
-                      {CardIcons.map((icon) => (
-                        <li
-                          key={icon.id}
-                          className="bg-white rounded-full p-[10px] cursor-pointer"
-                          title={icon.name}
-                        >
-                          <Image
-                            src={icon.image}
-                            width={16}
-                            height={16}
-                            alt={icon.name}
-                          />
-                        </li>
-                      ))}
-                    </ul>
+                    {/* Icons*/}
+                    <button className="card-icons bg-white rounded-full p-[10px]">
+                      <Trash2 size={16} color="red" />
+                    </button>
 
                     {/* Add-to-cart button */}
-                    <span className="cart-button">Add to Cart</span>
+                    <span className="cart-button ">Move to Cart</span>
                   </div>
 
                   <div className="mt-3">
@@ -120,4 +108,4 @@ const ProductCards = () => {
   );
 };
 
-export default ProductCards;
+export default WishlistCard;

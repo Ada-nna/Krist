@@ -63,12 +63,12 @@ const OrderCard: React.FC<OrderCardProps> = ({
       </p>
 
       {/* Status... */}
-      <div className="flex flex-col gap-3 font-medium text-[14px]">
-        <button className="border-2 py-[10px] px-6 rounded-full active:text-[#343434]">
+      <div className="flex flex-col gap-3 font-medium text-[12px]">
+        <button className="border-2 py-2 px-4 rounded-full active:text-[#343434]">
           {orderBtn1}
         </button>
         {orderBtn2 && (
-          <button className="py-[10px] px-6 rounded-full bg-black text-white active:text-[#f3f3f3]">
+          <button className="py-2 px-4 rounded-full bg-black text-white active:text-[#f3f3f3]">
             {orderBtn2}
           </button>
         )}

@@ -2,7 +2,10 @@
 import React, { useState } from "react";
 import Sidebar from "@/components/accountsPage/Sidebar";
 import OrderCard from "@/components/accountsPage/OrderCard";
+import SavedCards from "@/components/accountsPage/SavedCards";
 import ProfileForm from "@/components/accountsPage/ProfileForm";
+import WishlistCard from "@/components/accountsPage/WishlistCard";
+import ManageAddress from "@/components/accountsPage/ManageAddress";
 import {
   CheckoutTableData,
   ProfileSidebarList,
@@ -49,6 +52,10 @@ const page = () => {
                 </div>
               );
             })}
+
+          {isActive === ProfileSidebarList[2].option && <WishlistCard />}
+          {isActive === ProfileSidebarList[3].option && <ManageAddress />}
+          {isActive === ProfileSidebarList[4].option && <SavedCards />}
         </section>
       </div>
     </div>
