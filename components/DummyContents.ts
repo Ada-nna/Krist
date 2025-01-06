@@ -379,6 +379,8 @@ import {
   CreditCard,
   Bell,
   Settings,
+  PackageOpen,
+  LockKeyhole,
 } from "lucide-react";
 
 export const ProfileSidebarList = [
@@ -452,5 +454,76 @@ export const SavedCardList = [
     name: "Visa",
     cardNo: "5677 **** **** **23",
     logoImg: "/visa-logo.png",
+  },
+];
+
+export const NotificationsList = [
+  {
+    id: 1,
+    image: "./headshot-female.jpg",
+    title: "Profile update",
+    detail: "You have just updated your profile picture",
+    timeStamp: "Just now",
+  },
+  {
+    id: 2,
+    image: { icon: Package, size: 18, strokeWidth: 1.5 },
+    title: "Order placed successfully",
+    detail: "You have just placed a new order",
+    timeStamp: "11:16 PM",
+  },
+  {
+    id: 3,
+    image: { icon: PackageOpen, size: 18, strokeWidth: 1.5 },
+    title: "Order delivered",
+    detail: "You order has been delivered",
+    timeStamp: "09:00 AM",
+  },
+  {
+    id: 4,
+    image: "./headshot-female.jpg",
+    title: "You shared a feedback",
+    detail: "It was an amazing experience with your company",
+    timeStamp: "Yesterday",
+  },
+  {
+    id: 5,
+    image: { icon: LockKeyhole, size: 18, strokeWidth: 1.5 },
+    title: "Password updated successfully",
+    detail: "You have just updated your password",
+    timeStamp: "Yesterday",
+  },
+];
+
+export const AppearanceList = [
+  {
+    id: 1,
+    title: "Appearance",
+    detail: "Customize how your theme looks on your device",
+  },
+  {
+    id: 2,
+    title: "Language",
+    detail: "Select your language",
+  },
+  {
+    id: 3,
+    title: "Two-factor authentication",
+    detail: "Secure your account by enabling 2FA",
+  },
+  {
+    id: 4,
+    title: "Push notifications",
+    detail: "Receive push notifications",
+  },
+  {
+    id: 5,
+    title: "Desktop notifications",
+    detail: "Receive desktop notifications",
+  },
+  {
+    id: 6,
+    title: "Email notifications",
+    detail: "Receive email notifications",
   },
 ];

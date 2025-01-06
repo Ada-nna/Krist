@@ -1,11 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import Sidebar from "@/components/accountsPage/Sidebar";
+import Settings from "@/components/accountsPage/Settings";
 import OrderCard from "@/components/accountsPage/OrderCard";
 import SavedCards from "@/components/accountsPage/SavedCards";
 import ProfileForm from "@/components/accountsPage/ProfileForm";
 import WishlistCard from "@/components/accountsPage/WishlistCard";
 import ManageAddress from "@/components/accountsPage/ManageAddress";
+import Notifications from "@/components/accountsPage/Notifications";
 import {
   CheckoutTableData,
   ProfileSidebarList,
@@ -56,6 +58,8 @@ const page = () => {
           {isActive === ProfileSidebarList[2].option && <WishlistCard />}
           {isActive === ProfileSidebarList[3].option && <ManageAddress />}
           {isActive === ProfileSidebarList[4].option && <SavedCards />}
+          {isActive === ProfileSidebarList[5].option && <Notifications />}
+          {isActive === ProfileSidebarList[6].option && <Settings />}
         </section>
       </div>
     </div>

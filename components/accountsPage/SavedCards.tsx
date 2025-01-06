@@ -28,7 +28,7 @@ const SavedCards = () => {
                     <h3 className="text-[14px] md:text-base font-medium">
                       {list.name}
                     </h3>
-                    <p className="mt-1 text-[14px]">{list.cardNo}</p>
+                    <p className="mt-1 text-[14px] text-[#b7b7b7]">{list.cardNo}</p>
                   </div>
                 </section>
               </div>

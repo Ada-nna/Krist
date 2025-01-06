@@ -16,10 +16,10 @@ const AddressCard: React.FC<AddressCardProps> = ({
     <section className="flex items-start justify-between w-full border-b p-4">
       <div>
         <h3 className="text-[14px] font-medium">{name}</h3>
-        <p className="text-[13px] my-2">{address}</p>
+        <p className="text-[13px] my-2 text-[#b7b7b7]">{address}</p>
         <div className="flex items-center gap-2">
-          <PhoneCall size={15} strokeWidth={1} />
-          <p className="text-[13px]">{phoneNumber}</p>
+          <PhoneCall size={15} strokeWidth={1} color="#b7b7b7" />
+          <p className="text-[13px] text-[#b7b7b7]">{phoneNumber}</p>
         </div>
       </div>
 
