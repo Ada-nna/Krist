@@ -527,3 +527,43 @@ export const AppearanceList = [
     detail: "Receive email notifications",
   },
 ];
+
+export const AboutUsContent = [
+  {
+    id: 1,
+    title: "Who We Are ?",
+    detail:
+      "Contextual advertising programs sometimes have strict policies that need to be adhered too. Let’s take Google as an example.",
+  },
+  {
+    id: 2,
+    title: "What We Do ?",
+    detail:
+      "In this digital generation where information can be easily obtained within seconds, business cards still have retained their importance.",
+  },
+  {
+    id: 3,
+    title: "Why Choose Us ?",
+    detail:
+      "A two or three storey house is the ideal way to maximise the piece of earth on which our home sits, but for older or infirm people.",
+  },
+];
+
+export const SumUps = [
+  { id: 1, number: 102, text1: "Our", text2: "Clients" },
+  { id: 2, number: 30, text1: "Total", text2: "Categories" },
+  { id: 3, number: 150, text1: "In", text2: "Countries" },
+  { id: 4, number: "98%", text1: "Happy", text2: "Customer" },
+];
+
+export const TeamList = [
+  { id: 1, image: "./na.jpg", name: "Cynthia Okafor", role: "C.E.O" },
+  {
+    id: 2,
+    image: "./team-2.jpg",
+    name: "Christine Wise",
+    role: "Operations Manager",
+  },
+  { id: 3, image: "./team-3.jpg", name: "Sean Robbins", role: "Manager" },
+  { id: 4, image: "./team-4.jpg", name: "Lucy Myers", role: "Delivery" },
+];

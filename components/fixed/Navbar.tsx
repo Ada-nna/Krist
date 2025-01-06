@@ -58,7 +58,7 @@ const Navbar = () => {
             </li>
           </Popover>
           <li>
-            <Link href="/">Our story</Link>
+            <Link href="/">About us</Link>
           </li>
           <li>
             <Link href="/">Blog</Link>
@@ -167,7 +167,7 @@ const Navbar = () => {
             </PopoverContent>
           </Popover>
           <Link href="/" className="py-2" onClick={() => setNavShow(false)}>
-            Our story
+            About us
           </Link>
           <Link href="/" className="py-2" onClick={() => setNavShow(false)}>
             Blog
