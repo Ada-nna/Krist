@@ -10,7 +10,7 @@ import CategoriesCarousel from "@/components/homepage/CategoriesCarousel";
 const page = () => {
   return (
     <div className="w-full bg-[#f3f3f3] flex flex-col">
-      <div className="container px-4 md:px-6 flex-1">
+      <div className="container mx-auto px-4 md:px-6 flex-1">
         <Hero />
         {/* <OutfitCategories /> */}
         <CategoriesCarousel />

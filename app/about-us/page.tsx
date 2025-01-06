@@ -16,12 +16,14 @@ const page = () => {
           className="w-full h-[40vh] md:h-[70vh]"
         ></div>
 
-        <div className="flex items-center justify-between mt-8">
+        <div className="flex items-center justify-center mt-8">
           {AboutUsContent.map((list) => {
             return (
-              <div key={list.id}>
-                <h1 className="font-medium text-[22px]">{list.title}</h1>
-                <p className="text-[#343434] text-[14px] md:text-base w-[90%] mt-1">
+              <div key={list.id} className="border rounded-[4px]">
+                <h1 className="font-medium text-[22px] text-center">
+                  {list.title}
+                </h1>
+                <p className="text-[#343434] text-[14px] md:text-base w-[90%] mt-1 text-center">
                   {list.detail}
                 </p>
               </div>
